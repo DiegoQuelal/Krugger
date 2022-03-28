@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bd256b84-6ea6-4dd5-99c5-05143a1983f7": {
+      "ProjectGuid": "bd256b84-6ea6-4dd5-99c5-05143a1983f7",
+      "DisplayName": "SistemaParqueaderos",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

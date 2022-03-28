@@ -1,0 +1,117 @@
+﻿@using PagedList;
+@using System.Web;
+@using X.PagedList;
+@model PagedList.IPagedList<FrontGestionParqueaderos.Models.Gestion>
+@{
+    ViewData["Title"] = "Gestión";
+}
+<center>
+<h1>Gestión</h1>
+    <a class="btn btn-outline-primary" asp-action="Add">Agregar</a>
+</center>
+<br />
+<form asp-action="Index" method="get">
+    <div class="form-control">
+        <p>
+            Filtro:  <input type="text" name="FiltroBusqueda" value="@ViewData["FitroActual"]"/> |
+            <input type="submit" class="btn btn-outline-secondary" value="Buscar"/>
+            <br />
+            <a asp-action="Index">Todos los registros</a>
+        </p>
+    </div>
+</form>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id Registro
+                </th>
+                <th>
+                   Parqueadero Asignado
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Ingreso
+                </th>
+                <th>
+                    Salida
+                </th>
+                <th>
+                    Placa
+                </th>
+                <th>
+                    Usuario
+                </th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdRegistro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nomenclatura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaIngreso)
+                </td>
+                @if(item.Estado == "Pendiente")
+                {
+                <td>
+                </td>
+                }
+                else
+                    {
+                         <td>
+                             @Html.DisplayFor(modelItem => item.FechaSalida)
+                        </td>
+                    }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreUsuario)
+                </td>
+                @if(item.Estado == "Pendiente")
+                {
+                <td>
+                    <a asp-action="Edit" class="btn btn-outline-success" asp-route-IdRegistro ="@item.IdRegistro">Pagar</a> |
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-IdRegistro ="@item.IdRegistro">Eliminar</a>
+                </td>
+                }
+                else
+                    {
+                    <td>
+                    <a asp-action="Edit" class="btn btn-outline-success disabled" asp-route-IdRegistro ="@item.IdRegistro">Pagar</a> |
+                    <a asp-action="Delete" class="btn btn-outline-danger disabled" asp-route-IdRegistro ="@item.IdRegistro">Eliminar</a>
+                    </td> 
+                    }
+            </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    <br />
+    Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+    <br />
+    @{
+    var desAnterior = Model.PageNumber == 1 ? "disabled" : "";
+    var desSiguiente = Model.PageNumber == Model.TotalItemCount ? "disabled" : "";
+}
+<a asp-action="Index" class="btn btn-outline-secondary @desAnterior" asp-route-Pagina = "@(1)">|<</a> |
+<a asp-action="Index" class="btn btn-outline-secondary @desAnterior" asp-route-Pagina = "@(Model.PageNumber-1)"><</a> |
+<a asp-action="Index" class="btn btn-outline-secondary @desSiguiente" asp-route-Pagina = "@(Model.PageNumber+1)">></a>
+<a asp-action="Index" class="btn btn-outline-secondary @desSiguiente" asp-route-Pagina = "@(Model.TotalItemCount)">>|</a>
+<br />
+    Total de Registros @Model.TotalItemCount

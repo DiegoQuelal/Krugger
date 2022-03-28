@@ -1,0 +1,68 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FrontGestionParqueaderos
+build_property.RootNamespace = FrontGestionParqueaderos
+build_property.ProjectDir = D:\Proyecto Kruger\FrontGestionParqueaderos\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Proyecto Kruger\FrontGestionParqueaderos
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Gestion/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvblxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Gestion/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Gestion/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Gestion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Parqueaderos/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFycXVlYWRlcm9zXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Parqueaderos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFycXVlYWRlcm9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Parqueaderos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFycXVlYWRlcm9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Parqueaderos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFycXVlYWRlcm9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyecto Kruger/FrontGestionParqueaderos/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-u38mqk09ru

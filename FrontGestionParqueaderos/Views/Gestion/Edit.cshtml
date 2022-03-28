@@ -1,0 +1,63 @@
+﻿@model FrontGestionParqueaderos.Models.Gestion
+@{
+    ViewData["Title"] = "Gestión";
+}
+<div class="container p-3 my-3 border" >
+    <h4>¿Está seguro que desea procesar el pago?</h4>
+    <br />
+    El costo de la hora o fracción es: $0.50
+    <div class="row">
+        <div class="col-sm-6">
+            <hr />
+            <form asp-action="Edit">
+                <div class="form-group">
+                    <input type="hidden" asp-for="IdRegistro" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Placa: 
+                </div>
+                <div class="form-group">
+                    <input readonly="readonly" asp-for="Placa" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Parqueadero: 
+                </div>
+                <div class="form-group">
+                    <input readonly="readonly" asp-for="Nomenclatura" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Fecha Ingreso: 
+                </div>
+                <div class="form-group">
+                    <input readonly="readonly" asp-for="FechaIngreso" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Fecha Salida: 
+                </div>
+                <div class="form-group">
+                    <input readonly="readonly" asp-for="FechaSalida" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Total Horas: 
+                </div>
+                <div class="form-group">
+                    <input readonly="readonly" value="@ViewBag.TotalHoras" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Valor a pagar: 
+                </div>
+                <div class="form-group">
+                    <input readonly="readonly" asp-for="ValorPagar" class="form-control" />
+                </div>
+                <br />
+                <div class="form-group">
+                    <a class="btn btn-success" asp-action="Editar" asp-route-IdRegistro="@Model.IdRegistro" asp-route-ValorPagar="@Model.ValorPagar"/>Pagar</a> |
+                    <a class="btn btn-primary" asp-action="Index">Regresar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

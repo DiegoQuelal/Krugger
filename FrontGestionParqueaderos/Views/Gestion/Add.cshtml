@@ -1,0 +1,38 @@
+﻿@model FrontGestionParqueaderos.Models.Gestion
+@{
+    ViewData["Title"] = "Gestion";
+}
+<div class="container p-3 my-3 border" >
+    <h1>Editar</h1>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <hr />
+            <form asp-action="Add">
+                <div class="form-group">
+                    <b><label asp-for="IdRegistro" class="control-label"></label></b>
+                    <input asp-for="IdRegistro" class="form-control" />
+                    <span asp-validation-for="IdRegistro" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <b><label asp-for="Placa" class="control-label"></label></b>
+                    <input asp-for="Placa" class="form-control" />
+                    <span asp-validation-for="Placa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <b><label asp-for="Nomenclatura" class="control-label"></label></b>
+                    <select asp-for="Nomenclatura" class="form-control" asp-items="ViewBag.ParqueaderosDisponibles"></select>
+                    <span asp-validation-for="Nomenclatura" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" value="Generar" /> |
+                    <a class="btn btn-primary" asp-action="Index">Regresar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
